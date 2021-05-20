@@ -51,9 +51,9 @@ export default function Home() {
  // - Use principalmente quando funções são criadas em Contextos 
  // - Quando cria uma função e ela vai ser repassadas para os filhos
   
- // const addToWishlist = useCallback(async (id: number) => {
-  //   console.log(id)
-  // }, [])
+  const addToWishlist = useCallback(async (id: number) => {
+    console.log(id)
+  }, [])
 
   return (
     <div>
@@ -71,6 +71,7 @@ export default function Home() {
       <SearchResults 
         results={results.data} 
         totalPrice={results.totalPrice}
+        onAddToWishlist={addToWishlist}
       />
     </div>
   )
